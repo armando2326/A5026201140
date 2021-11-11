@@ -23,5 +23,11 @@ Route::get('praktikum2', function () {
     return view('praktikumkedua');
 });
 
+Route::get('ets', "EtsController@showForm");
+
+Route::get('tugasphp', "TugasPHPController@calculateForm");
+Route::post('fact', "TugasPHPController@calculateResults");
+
+//Tutorial pak FJ
 Route::get('isiannama', "ViewController@showForm");
 Route::post('greetings', "ViewController@resultGreetings");
