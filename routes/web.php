@@ -31,3 +31,11 @@ Route::post('fact', "TugasPHPController@calculateResults");
 //Tutorial pak FJ
 Route::get('isiannama', "ViewController@showForm");
 Route::post('greetings', "ViewController@resultGreetings");
+
+//route belajar_laravel
+Route::get('/pegawai','PegawaiController@index'); //home
+Route::get('/pegawai/tambah','PegawaiController@tambah'); //tambah pegawai
+Route::post('/pegawai/store','PegawaiController@store'); //simpan hasil tambah pegawai
+Route::get('/pegawai/edit/{id}','PegawaiController@edit');
+Route::post('/pegawai/update','PegawaiController@update');
+Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
