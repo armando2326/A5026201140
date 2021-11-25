@@ -39,3 +39,11 @@ Route::post('/pegawai/store','PegawaiController@store'); //simpan hasil tambah p
 Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+
+//Tugas PWEB Query Builder 25 Nov 2021
+Route::get('/tugas','TugasQueryBuilder@home');
+Route::get('/tugas/tambah','TugasQueryBuilder@tambah');
+Route::post('/tugas/store','TugasQueryBuilder@store');
+Route::get('/tugas/edit/{id}','TugasQueryBuilder@edit');
+Route::post('/tugas/update','TugasQueryBuilder@update');
+Route::get('/tugas/hapus/{id}','TugasQueryBuilder@hapus');
