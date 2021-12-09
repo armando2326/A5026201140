@@ -47,3 +47,19 @@ Route::post('/tugas/store','TugasQueryBuilder@store');
 Route::get('/tugas/edit/{id}','TugasQueryBuilder@edit');
 Route::post('/tugas/update','TugasQueryBuilder@update');
 Route::get('/tugas/hapus/{id}','TugasQueryBuilder@hapus');
+
+//route CRUD absen
+Route::get('/absen','AbsenController@indexabsen');
+Route::get('/absen/add','AbsenController@add');
+Route::post('/absen/store','AbsenController@store');
+Route::get('/absen/edit/{id}','AbsenController@edit');
+Route::post('/absen/update','AbsenController@update');
+Route::get('/absen/hapus/{id}','AbsenController@hapus');
+
+//route pendapatan
+Route::get('/pendapatan','PendapatanController@home');
+Route::get('/pendapatan/tambah','PendapatanController@tambah');
+Route::post('/pendapatan/simpan','PendapatanController@simpan');
+Route::get('/pendapatan/edit/{id}','PendapatanController@edit');
+Route::post('/pendapatan/update','PendapatanController@update');
+Route::get('/pendapatan/hapus/{id}','PendapatanController@hapus');
