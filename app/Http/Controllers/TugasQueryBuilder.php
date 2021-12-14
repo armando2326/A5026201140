@@ -11,7 +11,10 @@ class TugasQueryBuilder extends Controller
 
     public function home()
     {
-        $tugas = DB::table('tugas')->get();
+        $tugas = DB::table('tugas')
+        ->join('pegawai', 'tugas.IDPegawai', '=', 'pegawai.pegawai_id')
+        ->select('tugas.*', 'pegawai.pegawai_nama')
+        ->paginate(5) ;
         return view('tugasquerybuilder.home', ['tugas' => $tugas]);
     }
 

@@ -37,8 +37,10 @@ Route::get('/pegawai','PegawaiController@index'); //home
 Route::get('/pegawai/tambah','PegawaiController@tambah'); //tambah pegawai
 Route::post('/pegawai/store','PegawaiController@store'); //simpan hasil tambah pegawai
 Route::get('/pegawai/edit/{id}','PegawaiController@edit');
+Route::get('/pegawai/view/{id}','PegawaiController@detail');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+Route::get('/pegawai/cari','PegawaiController@cari');
 
 //Tugas PWEB Query Builder 25 Nov 2021
 Route::get('/tugas','TugasQueryBuilder@home');
@@ -63,3 +65,13 @@ Route::post('/pendapatan/simpan','PendapatanController@simpan');
 Route::get('/pendapatan/edit/{id}','PendapatanController@edit');
 Route::post('/pendapatan/update','PendapatanController@update');
 Route::get('/pendapatan/hapus/{id}','PendapatanController@hapus');
+
+//route bolpen
+Route::get('/bolpen','BolpenController@index');
+Route::get('/bolpen/tambah','BolpenController@tambah');
+Route::post('/bolpen/simpan','BolpenController@simpan');
+Route::get('/bolpen/edit/{kodebolpen}','BolpenController@edit');
+Route::post('/bolpen/update','BolpenController@update');
+Route::get('/bolpen/hapus/{kodebolpen}','BolpenController@hapus');
+Route::get('/bolpen/cari','BolpenController@cari');
+Route::get('/bolpen/view/{id}','BolpenController@detail');

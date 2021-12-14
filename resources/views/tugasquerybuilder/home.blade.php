@@ -14,8 +14,7 @@
 
             <table border="1">
                 <tr>
-                    <th>ID</th>
-                    <th>ID Pegawai</th>
+                    <th>Nama Pegawai</th>
                     <th>Tanggal</th>
                     <th>Nama Tugas</th>
                     <th>Status</th>
@@ -23,8 +22,7 @@
                 </tr>
                 @foreach($tugas as $t)
                 <tr>
-                    <td>{{ $t->ID }}</td>
-                    <td>{{ $t->IDPegawai }}</td>
+                    <td>{{ $t->pegawai_nama }}</td>
                     <td>{{ date('Y-m-d g:i A', strtotime($t->Tanggal)) }}</td>
                     <td style="width: 250px;">{{ $t->NamaTugas }}</td>
                     <td>{{ $t->Status }}</td>
@@ -35,4 +33,5 @@
                 </tr>
                 @endforeach
             </table>
+            {{ $tugas->links() }}
 @endsection

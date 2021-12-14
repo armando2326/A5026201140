@@ -16,7 +16,7 @@
 	<table border="1">
 		<tr>
 
-			<th>IDPegawai</th>
+			<th>Nama</th>
 			<th>Tanggal</th>
 			<th>Status</th>
 			<th>Opsi</th>
@@ -24,7 +24,7 @@
 		@foreach($absen as $a)
 		<tr>
 
-			<td>{{ $a->IDPegawai }}</td>
+			<td>{{ $a->pegawai_nama }}</td>
 			<td>{{ $a->Tanggal }}</td>
 			<td>{{ $a->Status }}</td>
 			<td>
@@ -40,6 +40,7 @@
         I : Izin <br>
         S : Sakit <br>
         A : Alpha <br>
-        </p>
-
+    </p>
+    {{ $absen->links() }}
+    <a href="/absen">Home</a>
 @endsection

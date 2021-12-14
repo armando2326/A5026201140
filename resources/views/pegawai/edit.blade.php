@@ -31,7 +31,7 @@
             <input class="btn btn-success rounded-pill shadow" type="submit" value="Simpan Data">
         </div>
     </form>
+    @endforeach
     <br>
     <a href="/pegawai"> Kembali</a>
-	@endforeach
 @endsection
