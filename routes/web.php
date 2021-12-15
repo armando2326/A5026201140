@@ -75,3 +75,10 @@ Route::post('/bolpen/update','BolpenController@update');
 Route::get('/bolpen/hapus/{kodebolpen}','BolpenController@hapus');
 Route::get('/bolpen/cari','BolpenController@cari');
 Route::get('/bolpen/view/{id}','BolpenController@detail');
+
+//route karyawan1 (EAS)
+Route::get('/karyawan1','KaryawanController@index');
+Route::get('/karyawan1/tambah','KaryawanController@tambah');
+Route::post('/karyawan1/simpan','KaryawanController@simpan');
+Route::get('/karyawan1/hapus/{nip}','KaryawanController@hapus');
+Route::get('/karyawan1/konfirmasihapus/{nip}','KaryawanController@konfirmasihapus');

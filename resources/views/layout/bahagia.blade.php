@@ -185,6 +185,11 @@
                     Bolpen
                 </a>
         </li>
+        <li class="nav-item">
+            <a href="/karyawan1" class="nav-link">
+                    Karyawan (EAS)
+                </a>
+        </li>
         </ul>
     </div>
 
